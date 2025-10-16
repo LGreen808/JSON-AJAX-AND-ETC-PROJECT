@@ -1,0 +1,51 @@
+[
+    {
+        "className": "English 4",
+        "teacher": "Fontanilla",
+        "roomNumber": "E123",
+        "period": "1",
+        "subjectArea": "English"
+    },
+    {
+        "className": "Honors NJIT IS219 Advanced Website Development WDP",
+        "teacher": "Kilgore",
+        "roomNumber": "B111",
+        "period": "2",
+        "subjectArea": "Comp Sicence"
+    },
+    {
+        "className": "Advanced Algebra & Trig",
+        "teacher": "Daley",
+        "roomNumber": "A223",
+        "period": "3",
+        "subjectArea": "Math"
+    },
+    {
+        "className": "Gym",
+        "teacher": "Levi",
+        "roomNumber": "Gym",
+        "period": "4",
+        "subjectArea": "Gym"
+    },
+    {
+        "className": "Video Editing & Media Prod 1",
+        "teacher": "Werntz",
+        "roomNumber": "B106",
+        "period": "5",
+        "subjectArea": "Comp Sicence"
+    },
+    {
+        "className": "Applied Art 1",
+        "teacher": "Rucci",
+        "roomNumber": "D103",
+        "period": "6",
+        "subjectArea": "Art"
+    },
+    {
+        "className": "Popular Music 1",
+        "teacher": "Ippolito",
+        "roomNumber": "C103",
+        "period": "7",
+        "subjectArea": "Music"
+    }
+]
