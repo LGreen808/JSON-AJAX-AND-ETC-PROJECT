@@ -1,39 +1,55 @@
-async function start(name) {
-   const jsonData = await (await fetch(name)).json();
+async function loadJSON(filename) {
+  const tableHeader = document.getElementById('tableHeader');
+  const tableBody = document.getElementById('tableBody');
 
-   // Get table elements
-   const tableHeader = document.getElementById('tableHeader');
-   const tableBody = document.getElementById('tableBody');
+  // Clear table
+  tableHeader.innerHTML = '';
+  tableBody.innerHTML = '';
 
-   // Clear existing table
-   tableHeader.innerHTML = '';
-   tableBody.innerHTML = '';
+  try {
+    const response = await fetch(filename);
+    if (!response.ok) {
+      throw new Error(`HTTP error ${response.status}`);
+    }
 
-   // Generate table headers dynamically
-   const headers = Object.keys(jsonData[0]);
-   headers.forEach(header => {
+    const data = await response.json();
+
+    if (!Array.isArray(data) || data.length === 0) {
+      tableBody.innerHTML = '<tr><td colspan="100%">No data available</td></tr>';
+      return;
+    }
+
+    // Generate table headers
+    const headers = Object.keys(data[0]);
+    const headerRow = document.createElement('tr');
+    headers.forEach(header => {
       const th = document.createElement('th');
       th.textContent = header;
-      tableHeader.appendChild(th);
-   });
+      headerRow.appendChild(th);
+    });
+    tableHeader.appendChild(headerRow);
 
-   // Generate table rows dynamically
-   jsonData.forEach(row => {
+    // Generate rows
+    data.forEach(row => {
       const tr = document.createElement('tr');
       headers.forEach(header => {
-         const td = document.createElement('td');
-         td.textContent = row[header];
-         tr.appendChild(td);
+        const td = document.createElement('td');
+        td.textContent = row[header];
+        tr.appendChild(td);
       });
       tableBody.appendChild(tr);
-   });
+    });
+
+  } catch (error) {
+    console.error('Error loading JSON:', error);
+    tableBody.innerHTML = `<tr><td colspan="100%">⚠️ Error loading ${filename}: ${error.message}</td></tr>`;
+  }
 }
 
 // Initial load
-start('Cooper.JSON');
+loadJSON('Cooper.json');
 
-// Dropdown event listener
+// Listen to dropdown change
 document.getElementById('jsonSelect').addEventListener('change', function () {
-   const selectedFile = this.value;
-   start(selectedFile);
+  loadJSON(this.value);
 });
