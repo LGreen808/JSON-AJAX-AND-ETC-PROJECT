@@ -16,13 +16,31 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="style.css"/>
     </head>
 
     <body>
         <header>
             <!-- place navbar here -->
         </header>
-        <main></main>
+        <main>
+
+
+   <label for="jsonSelect">Choose a Person!</label>
+   <select id="jsonSelect">
+      <option value="Cooper.JSON">Cooper</option>
+      <option value="Miller.JSON">Annie</option>
+      <option value="Brand.JSON">Nick</option>
+   </select>
+
+   <table border="1">
+      <thead id="tableHeader"></thead>
+      <tbody id="tableBody"></tbody>
+   </table>
+
+   <script src="script.js"></script>
+
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>
@@ -38,5 +56,6 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script src="script.js"></script>
     </body>
 </html>
