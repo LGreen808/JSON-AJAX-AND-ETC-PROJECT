@@ -10,3 +10,18 @@ table {
     th {
       background-color: #eee;
     }
+
+  h1, h3 {
+    text-align: center;
+  }
+
+body {
+    background-image: url("imgs/Background2.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.table {
+    background-color: lightgray
+}

@@ -47,7 +47,7 @@ async function loadJSON(filename) {
 }
 
 // Initial load
-loadJSON('Cooper.json');
+loadJSON('Layla.json');
 
 // Listen to dropdown change
 document.getElementById('jsonSelect').addEventListener('change', function () {
