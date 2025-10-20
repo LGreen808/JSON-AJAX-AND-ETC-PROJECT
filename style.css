@@ -6,6 +6,7 @@ body {
   margin: 0 !important;
   padding: 0 !important;
 }
+/*Styling for the schedule (list of classes)*/
 div:has(table) {
   width: 100%;
   position: absolute;
@@ -25,6 +26,7 @@ td {
   border: 1px solid black;
   padding: 8px;
 }
+/*Styling for the schedule header*/
 th {
   background-color: gray;
   color: rgb(8, 8, 66);
@@ -38,6 +40,7 @@ h4 {
   color: white
 }
 
+/*Background Image....The Image is from the new Frankenstein Movie*/
 body {
   background-image: url("imgs/Background2.webp");
   background-size: cover;

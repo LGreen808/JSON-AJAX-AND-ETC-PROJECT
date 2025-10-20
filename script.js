@@ -1,6 +1,7 @@
 async function loadJSON(filename) {
   const tableHeader = document.getElementById("tableHeader");
   const tableBody = document.getElementById("tableBody");
+  
   // Clear table
   tableHeader.innerHTML = "";
   tableBody.innerHTML = "";
@@ -35,13 +36,14 @@ async function loadJSON(filename) {
       });
       tableBody.appendChild(tr);
     });
+  // Catches and Displays an error message if an error occurs loading the JSON
   } catch (error) {
     console.error("Error loading JSON:", error);
-    tableBody.innerHTML = `<tr><td colspan="100%">⚠️ Error loading ${filename}: ${error.message}</td></tr>`;
+    tableBody.innerHTML = `<tr><td colspan="100%">Sorry there was a problem loading ${filename}!: ${error.message}</td></tr>`;
   }
 }
 
-// Initial load
+// Initial load...aka the first schedule that comes on the website
 loadJSON("Layla.json");
 
 // Listen to dropdown change
