@@ -10,7 +10,6 @@ div:has(table) {
   width: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   background-color: #cf1f34;
   color: rgb(8, 8, 66);
   font-weight: bold;
@@ -36,7 +35,7 @@ h1,
 h3,
 h4 {
   text-align: center;
-  color: white;
+  color: white
 }
 
 body {
@@ -48,4 +47,11 @@ body {
 
 .table {
   background-color: lightgray;
+}
+
+.dropdown {
+  background-color: gray;
+  font-weight: bold;
+  color: rgb(8, 8, 66);
+  border-color: black;
 }
