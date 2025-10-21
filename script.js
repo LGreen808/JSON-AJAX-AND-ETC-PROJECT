@@ -41,6 +41,7 @@ async function loadJSON(filename) {
     data.forEach((row) => {
   // Create a table row
       const tr = document.createElement("tr");
+  // For each header, create a cell in the row
       headers.forEach((header) => {
   // Create and append table data elements for each cell
         const td = document.createElement("td");
