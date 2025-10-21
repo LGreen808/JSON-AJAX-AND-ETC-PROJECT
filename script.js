@@ -35,7 +35,7 @@ async function loadJSON(filename) {
       headerRow.appendChild(th);
     });
   // Append header row to table header...puts the table header with the table body
-    tableHeader.appendChild(headerRow);
+     tableHeader.appendChild(headerRow);
 
   // Generate rows
     data.forEach((row) => {
