@@ -1,51 +1,51 @@
 [
     {
+        "period": 1,
         "className": "English 4",
         "teacher": ["Mrs. Fontanilla"],
         "roomNumber": "E123",
-        "period": 1,
         "subjectArea": "English"
     },
     {
+        "period": 2,
         "className": "Honors NJIT IS219 Advanced Website Development WDP",
         "teacher": ["Mr. Kilgore"],
         "roomNumber": "B111",
-        "period": 2,
         "subjectArea": "Technology"
     },
     {
+        "period": 3,
         "className": "Pre-Calculus",
         "teacher": ["Mr. Ploe"],
         "roomNumber": "E215",
-        "period": 3,
         "subjectArea": "Math"
     },
     {
+        "period": 4,
         "className": "Public Speaking",
         "teacher": ["Ms. Bender"],
         "roomNumber": "A127",
-        "period": 4,
         "subjectArea": "English"
     },
     {
+        "period": 5,
         "className": "AP Computer Science Principles",
         "teacher": ["Mrs. Leonard"],
         "roomNumber": "B110",
-        "period": 5,
         "subjectArea": "Technology"
     },
     {
+        "period": 6,
         "className": "Physical Education",
         "teacher": ["Mrs. Keil"],
         "roomNumber": "GYM",
-        "period": 6,
         "subjectArea": "Physical Education"
     },
     {
+        "period": 7,
         "className": "Applied Art 1",
         "teacher": ["Mrs. Fraser"],
         "roomNumber": "D101",
-        "period": 7,
         "subjectArea": "Visual Arts"
     }
 ]
