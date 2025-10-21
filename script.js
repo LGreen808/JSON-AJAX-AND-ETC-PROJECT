@@ -19,29 +19,37 @@ async function loadJSON(filename) {
     const data = await response.json();
 // Check if data is an array and has content
     if (!Array.isArray(data) || data.length === 0) {
-// 
+// If no data, display the below message
       tableBody.innerHTML =
         '<tr><td colspan="100%">No data available</td></tr>';
       return;
     }
-    // Generate table headers
+// Generate table headers
     const headers = Object.keys(data[0]);
+// Create header row
     const headerRow = document.createElement("tr");
+// Create and append table header elements for each header
     headers.forEach((header) => {
       const th = document.createElement("th");
       th.textContent = header;
       headerRow.appendChild(th);
     });
+  // Append header row to table header
     tableHeader.appendChild(headerRow);
 
   // Generate rows
     data.forEach((row) => {
+  // Create a table row
       const tr = document.createElement("tr");
       headers.forEach((header) => {
+  // Create and append table data elements for each cell
         const td = document.createElement("td");
+  // Set cell text content 
         td.textContent = row[header];
+  // Append cell to row
         tr.appendChild(td);
       });
+    
       tableBody.appendChild(tr);
     });
   // Catches and Displays an error message if an error occurs loading the JSON
