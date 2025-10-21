@@ -34,7 +34,7 @@ async function loadJSON(filename) {
       th.textContent = header;
       headerRow.appendChild(th);
     });
-  // Append header row to table header
+  // Append header row to table header...puts the table header with the table body
     tableHeader.appendChild(headerRow);
 
   // Generate rows
@@ -44,8 +44,8 @@ async function loadJSON(filename) {
       headers.forEach((header) => {
   // Create and append table data elements for each cell
         const td = document.createElement("td");
-  // Set cell text content 
-        td.textContent = row[header];
+  // Set cell text content...puts data into each cell (not the header cells though!)
+      td.textContent = row[header];  
   // Append cell to row
         tr.appendChild(td);
       });
