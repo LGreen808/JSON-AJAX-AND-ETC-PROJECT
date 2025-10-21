@@ -1,17 +1,25 @@
+// Cooper helped me with a lot of this code and AI was used in making this code
 async function loadJSON(filename) {
+  // This gets table elements from index.html
   const tableHeader = document.getElementById("tableHeader");
   const tableBody = document.getElementById("tableBody");
   
   // Clear table
   tableHeader.innerHTML = "";
   tableBody.innerHTML = "";
+
+// Fetch JSON data
   try {
     const response = await fetch(filename);
+// Checks for HTTP errors (e.g. status NOT in the region of 200 - 299)
     if (!response.ok) {
       throw new Error(`HTTP error ${response.status}`);
     }
+// Parse JSON data
     const data = await response.json();
+// Check if data is an array and has content
     if (!Array.isArray(data) || data.length === 0) {
+// 
       tableBody.innerHTML =
         '<tr><td colspan="100%">No data available</td></tr>';
       return;
@@ -26,7 +34,7 @@ async function loadJSON(filename) {
     });
     tableHeader.appendChild(headerRow);
 
-    // Generate rows
+  // Generate rows
     data.forEach((row) => {
       const tr = document.createElement("tr");
       headers.forEach((header) => {
@@ -46,7 +54,7 @@ async function loadJSON(filename) {
 // Initial load...aka the first schedule that comes on the website
 loadJSON("Layla.json");
 
-// Listen to dropdown change
+// Listens to dropdown change
 document.getElementById("jsonSelect").addEventListener("change", function () {
   loadJSON(this.value);
 });

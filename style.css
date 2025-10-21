@@ -33,9 +33,9 @@ th {
   font-weight: bold;
 }
 
+/*Styling the title and welcome message*/
 h1,
-h3,
-h4 {
+h3 {
   text-align: center;
   color: white
 }
@@ -58,5 +58,7 @@ body {
   font-weight: bold;
   color: rgb(8, 8, 66);
   border-color: black;
-  
+  width: 50px;
+  height: 50px;
+
 }
