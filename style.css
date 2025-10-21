@@ -52,9 +52,11 @@ body {
   background-color: lightgray;
 }
 
+/*Styling for the dropdown*/
 .dropdown {
   background-color: gray;
   font-weight: bold;
   color: rgb(8, 8, 66);
   border-color: black;
+  
 }
